@@ -117,6 +117,25 @@ KateMainWindow::KateMainWindow(KConfig *sconfig, const QString &sgroup)
     KConfigGroup(KSharedConfig::openConfig(), "General").writeEntry("Config Revision", currentConfigRevision);
     const bool firstStart = readConfigRevision < currentConfigRevision;
 
+
+
+
+    // MOD
+    // Follow / UnFollow System / Kvantum Color Scheme
+    // setAttribute(Qt::WA_TranslucentBackground, true);
+    // setAttribute(Qt::WA_NoSystemBackground);
+
+    // setProperty("windowOpacity", 0);
+    // setWindowOpacity(0);
+    // setAutoFillBackground(false);
+
+    QPalette p = palette();
+    p.setBrush(QPalette::Base, Qt::transparent);
+    setPalette(p);
+
+
+
+
     // start session restore if needed
     startRestore(sconfig, sgroup);
 

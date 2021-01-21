@@ -532,7 +532,16 @@ public:
 
         // diagnostics tab
         m_diagnosticsTree = new QTreeView();
-        m_diagnosticsTree->setAlternatingRowColors(true);
+
+        
+
+        // MOD
+        m_diagnosticsTree->setAlternatingRowColors(false);
+
+
+
+
+        
         m_diagnosticsTreeOwn.reset(m_diagnosticsTree);
         m_diagnosticsModel.reset(new QStandardItemModel());
         m_diagnosticsModel->setColumnCount(1);

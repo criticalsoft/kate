@@ -42,7 +42,15 @@ TargetsUi::TargetsUi(QObject *view, QWidget *parent)
     buildButton->setToolTip(i18n("Build selected target"));
 
     targetsView = new QTreeView(this);
-    targetsView->setAlternatingRowColors(true);
+    
+    
+    
+    
+    // MOD
+    targetsView->setAlternatingRowColors(false);
+
+
+
 
     targetsView->setModel(&targetsModel);
     m_delegate = new TargetHtmlDelegate(view);
